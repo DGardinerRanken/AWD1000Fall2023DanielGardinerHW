@@ -1,0 +1,293 @@
+html{
+    background-image: url(../images/bats.gif);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 960px;
+    width: 95%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 0;
+    border: 3px solid black;
+    box-shadow: 0 9px 18px 9px;
+}
+
+h1,h2,h3, p{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: -webkit-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: -moz-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: -o-linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    background-image: linear-gradient(45deg, white 0%, orange 75%, black 100%);
+    padding: .9375em 1.875%;
+    border-bottom: 2px solid black;
+}
+
+/*nav menu stuff*/
+
+#nav_menu{
+    clear:both; 
+}
+
+#nav_menu ul{
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_menu ul li{
+    float:left;
+    width: 20%;
+}
+
+#nav_menu ul ul{
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+#nav_menu ul ul li{
+    float: none;
+}
+
+#nav_menu ul li:hover >ul{
+    display: block;
+    width: 100%;
+}
+
+#nav_menu > ul::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#nav_menu ul li a{
+    text-align: center;
+    display: block;
+    padding: .7em 0;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+#nav_menu ul li a.current {
+    color: orange;
+}
+
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus {
+    background-color: grey;
+}
+
+
+
+header img{
+    float:left;
+    padding-right: 1.875%;
+    width: 10.6%;
+    max-width: 5.3125rem;
+    min-width: 2.5rem;
+}
+
+header h2{
+    font-size: 230%;
+    /*text-indent: 25px;*/
+}
+header h3{
+    font-size: 125%;
+    padding-bottom: .75em;
+    /*text-indent: 25px;*/   
+}
+
+a {
+    font-weight: bold;
+}
+a:link, a:visited{
+    color: orange;
+
+}
+a:hover, a:focus{
+    color: green;
+}
+main li{
+    line-height: 150%;
+}
+.addmargin{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*aside stuff*/
+aside{
+    float: left;
+    width: 20%;
+    padding: 1.25em 0;
+}
+
+aside ul{
+    list-style: none;
+    padding-left: 15%;
+    width: 68.75%;
+}
+
+#nav_list ul{
+    margin-bottom: .5em;
+    
+}
+
+#nav_list ul li{
+    margin-bottom: .5em;
+    border: 2px solid black;
+}
+
+#nav_list ul li a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: orange;
+    padding: .5em 0 .5em 7.27272%;
+    color: black; 
+    text-align: center;
+}
+
+/*section stuff*/
+
+section{
+    width: 72.5%;
+    float: right;
+    padding: 1.25rem 5% 1.25rem 2.5%;
+}
+
+section h1{
+    font-size: 180%;
+    margin-bottom: .5em;
+
+}
+
+section h2{
+    font-size: 125%;
+    margin: .8em 0 .5em 0;
+}
+
+section h3{
+    font-size: 110%;
+    margin: .8em 0 .5em 0;
+}
+
+section p{
+    margin-bottom: .5em;
+}
+
+/*form stuff*/
+
+label{
+    float: left;
+    width: 6rem;
+    text-align: right;
+}
+
+input{
+    margin-left: 1rem;
+    margin-bottom: .5rem;
+    width: 20rem;
+}
+
+#button{
+    margin-left: 7rem;
+    margin-top: .75rem;
+    width: 8rem;
+    background-color: orange;
+    border: 2px solid black;
+}
+
+/*footer stuff*/
+footer{
+    clear:both;
+    background-image: -webkit-linear-gradient(45deg, black 0%, orange 75%, white 100%);
+    background-image: -moz-linear-gradient(45deg, black 0%, orange 75%, white 100%);
+    background-image: -o-linear-gradient(45deg, black 0%, orange 75%, white 100%);
+    background-image: linear-gradient(45deg, black 0%, orange 75%, white 100%);
+    padding: 0.9375em 1.875%;
+    border-top: 2px solid black;
+}
+footer p{
+    font-size: 90%;
+    text-align: center;
+}
+
+#mobile_menu{
+    display: none;
+}
+
+/* Media Queries*/
+
+@media only screen and (max-width: 800px){
+    html{
+        background-image: none;
+    }
+
+    body{
+        font-size: 90%;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    #nav_menu{
+        display: none;
+    }
+
+    #mobile_menu{
+        display: block;
+    }
+
+    header h2{
+        font-size: 200%;
+    }
+
+    section {
+        width: 90%;
+        float: none;
+        padding-left: 5%;
+        padding-bottom: .5em;
+    }
+
+    aside {
+        width: 90%;
+        float: none;
+        padding: 0 5% 1em 5%;
+    }
+
+    #nav_list ul{
+        width: 50%;
+        padding-left: 25%;
+        text-align: center;
+    }
+
+    #nav_list ul li a{
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 479px){
+    header h2{
+        font-size: 180%;
+    }
+
+    header h3{
+        font-size: 115%;
+    }
+
+    section h1{
+        font-size: 130%;
+    }
+
+    section h1::first-letter{
+        font-size: 180%;
+    }
+}
